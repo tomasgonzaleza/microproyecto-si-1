@@ -1,6 +1,3 @@
-/* eslint-disable */
-import "./style.css";
-
 window.onload = function() {
   let usersLeaderboard = JSON.parse(localStorage.getItem("usersLeaderboard"));
   let listOfPlayers = [];
