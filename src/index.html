@@ -1,29 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-    <link rel="shortcut icon" href="./4geeks.ico" />
+    <title>Simple Modal</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <h1>Welcome to BingoMET</h1>
+
+    <div id="mainMenu" class="container">
+      <div id="userRegistration" class="col-6">
+        <p>
+          Please register the players to start using BingoMET.
+        </p>
+        <button id="registerPlayerButton" class="my-3">Register player</button>
+        <div id="playersList">
+          <h3>Players:</h3>
+          <ul id="registeredUserList"></ul>
+        </div>
+        <div id="readyToStart">
+          <select name="boardSize" id="boardSizeSelect">
+            <option default value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <button id="startGameButton">Start Playing</button>
+        </div>
+      </div>
+
+      <div id="victoriesTable" class="col-6">
+        <table>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Victories</th>
+          </tr>
+          <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+        </table>
       </div>
     </div>
+
+    <div id="bingoGame">
+      <button id="nextNumberButton">Next number</button>
+      <div>
+        <p>Turns:</p>
+        <p id="turns"></p>
+      </div>
+      <div id="bingoNumberResults"></div>
+      <div id="userBingoTables"></div>
+    </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
